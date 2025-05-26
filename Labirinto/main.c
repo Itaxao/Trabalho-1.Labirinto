@@ -35,7 +35,8 @@
           matrix[i][j] = '*';
         }
       }
-     // Call the function GeneratePositions for using the enmy and spawn GeneratePositions(&enemy_randIndexLine,&enemy_randIndexColumn,&spawn_randIndexLine,&spawn_randIndexColumn);
+     // Call the function GeneratePositions for using the enmy and spawn.
+ GeneratePositions(&enemy_randIndexLine,&enemy_randIndexColumn,&spawn_randIndexLine,&spawn_randIndexColumn);
       // Enemy INDEX
       for(int i = 0; i < 11; i++){
         matrix[enemy_randIndexLine][enemy_randIndexColumn] = 'R';
