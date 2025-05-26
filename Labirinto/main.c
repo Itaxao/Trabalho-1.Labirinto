@@ -24,18 +24,18 @@
   // END
   }
 
-  // Run through matrix and fill each index with '*' character.
+  
   void MatrixFill(){
       // Variable declaration
       int enemy_randIndexLine, enemy_randIndexColumn;
       int spawn_randIndexLine, spawn_randIndexColumn;
-
+      // Run through matrix and fill each index with '*'       character.
       for(int i = 0; i < LINE; i++){
         for(int j = 0; j < COLUMN;j++){
           matrix[i][j] = '*';
         }
       }
-      GeneratePositions(&enemy_randIndexLine,&enemy_randIndexColumn,&spawn_randIndexLine,&spawn_randIndexColumn);
+     // Call the function GeneratePositions for using the enmy and spawn GeneratePositions(&enemy_randIndexLine,&enemy_randIndexColumn,&spawn_randIndexLine,&spawn_randIndexColumn);
       // Enemy INDEX
       for(int i = 0; i < 11; i++){
         matrix[enemy_randIndexLine][enemy_randIndexColumn] = 'R';
