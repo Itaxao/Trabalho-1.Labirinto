@@ -24,7 +24,7 @@
   // END
   }
 
-  // Run through matrix and fill which index with '*' character.
+  // Run through matrix and fill each index with '*' character.
   void MatrixFill(){
       // Variable declaration
       int enemy_randIndexLine, enemy_randIndexColumn;
