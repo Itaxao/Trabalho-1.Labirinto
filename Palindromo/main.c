@@ -6,7 +6,7 @@
 
 // Vector that will keep the word written for the user.
 char word[100];
-void PalindromeCheck();
+void PalindromeCheck(int len);
 
 void NormalizeString(int len){
     for(int i = 0 ; i <= len ; i++){
@@ -41,6 +41,7 @@ void PalindromeCheck(int len){
     }
     // Add the NULL value in the end of inverseWord.
     inverseWord[len] = '\0';
+
     // Comparasion if it's or not a palindrome.
     if(strcmp(inverseWord,word) == 0){
         printf("%s and %s: It's a palindrome\n",word,inverseWord);
