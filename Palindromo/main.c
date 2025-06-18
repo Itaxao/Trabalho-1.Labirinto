@@ -9,34 +9,34 @@ char word[100];
 void PalindromeCheck(int len);
 
 void NormalizeString(int len){
-    for(int i = 0 ; i <= len ; i++){
-        if (word[i] != ' ' && word[i] != ',' && word[i] != '.' && word[i] != '!' && word[i] != '?'){
-            word[i] = tolower(word[i]);
+    int j = 0;
+    for(int i = 0 ; i < len ; i++){
+        if (isalnum((unsigned char)word[i])){
+            word[j++] = tolower((unsigned char)word[i]);
         }
     }
+    word[j] = '\0';
 }
 
 // Assignment the word input from user.
 void Assignment(){
     printf("---------------------- Enter a word and i will check if is a Palindrome or not -----------------------\nThe word: ");
     fgets(word,100,stdin);
-    // Trade the final character in the word vector to a NULL character = '\0'.
-    word[len] = '\0';
-    int len = strlen(word)-1;
-
+    word[strcspn(word, "\n")] = '\0';
+    int len = strlen(word);
     // Call of the functions
     NormalizeString(len);
-    PalindromeCheck(len);
+    PalindromeCheck(strlen(word));
 }
 
 
 // Check a Palindrome
 void PalindromeCheck(int len){
-    // Variable that will keep the inverse word && a len that will keep the length of word.
+    // Variable that will keep the inverse word.
     char inverseWord[100];
 
     // Reverse the initial word.
-    for(int i = len, j = 0; i >= 0 ; i--, j++){
+    for(int i = len - 1, j = 0; i >= 0 ; i--, j++){
         inverseWord[j] = word[i];
     }
     // Add the NULL value in the end of inverseWord.
